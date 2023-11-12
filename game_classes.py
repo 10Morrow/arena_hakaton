@@ -5,7 +5,7 @@ from dataclasses import dataclass
 class Thing:
     """Создает объект инвентаря."""
     title: str
-    defense_percentage: int
+    defense_percentage: float
     attack: int
     health_point: int
 
@@ -16,15 +16,15 @@ class Person:
     name: str
     health: int
     default_attack: int
-    defense_percentage: int
+    defense_percentage: float
     
-       def set_things(things):
+    def set_things(self, things):
         """Принимает список вещей."""
         for thing in things:
             self._count_buff(**asdict(thing))
         pass
 
-    def attack_damage():
+    def attack_damage(self):
         """Вычитает жизни на основе атаки."""
         pass
 
